@@ -471,6 +471,34 @@ and thats how we ended getting married🫰</p>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <!-- ... (your existing HTML code) ... -->
+
+<script>
+    // Function to open the website after all images are loaded
+    function openWebsite() {
+        // Your code to open the website or perform any actions after all images have loaded
+        console.log('All images are loaded. Opening the website...');
+        // For example, you can open the website by setting window location
+        window.location.href = "https://main--iridescent-bienenstitch-b750cb.netlify.app/";
+    }
+
+    window.onload = function() {
+        var images = document.getElementsByTagName('img');
+        var totalImages = images.length;
+        var loadedImages = 0;
+
+        for (var i = 0; i < totalImages; i++) {
+            images[i].onload = function() {
+                loadedImages++;
+                if (loadedImages === totalImages) {
+                    // Call the function to open the website when all images are loaded
+                    openWebsite();
+                }
+            };
+        }
+    };
+</script>
+
 </body>
 
 </html>
