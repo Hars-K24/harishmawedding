@@ -472,10 +472,24 @@ and thats how we ended getting married🫰</p>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <!-- ... (your existing HTML code) ... -->
-<audio autoplay loop>
+<!-- Your HTML code -->
+<!-- Audio tag -->
+<audio id="background-music">
     <source src="SpotifyMate.com - Marriage Proposal - G. V. Prakash.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
+
+<!-- Play button to trigger the audio -->
+<button onclick="playAudio()">Play Music</button>
+
+<!-- Script to handle audio play -->
+<script>
+    function playAudio() {
+        var audio = document.getElementById("background-music");
+        audio.play();
+    }
+</script>
+
 <script>
     // Function to open the website after all images are loaded
     function openWebsite() {
